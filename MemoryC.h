@@ -64,7 +64,7 @@ bool write_memory(pid_t pid, kaddr address, int value) {
     return result == sizeof(value);
 }
 
-int main() {
+int main(int argc, char *argv[]) {
     static const char* process_name = "example_process";
     pid_t pid = find_pid(process_name);
     if (pid < 0) {
